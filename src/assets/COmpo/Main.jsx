@@ -5,6 +5,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import LeftNav from './Navbar/LeftNav';
 import RightNav from './Navbar/RightNav';
 import Footer from './Footer';
+import Nav from './Navbar/Nav';
 
 
 const Main = () => {
@@ -14,7 +15,7 @@ const Main = () => {
             <Container>
                 <Row>
                     <Col lg={3}><LeftNav></LeftNav></Col>
-                    <Col lg={6}> <h2>Main content Comming....</h2></Col>
+                    <Col lg={6}> <Nav></Nav></Col>
                     <Col lg={3}><RightNav></RightNav></Col>
                 </Row>
             </Container>

@@ -8,7 +8,7 @@ import { FaTripadvisor } from "react-icons/fa";
 
 const Header = () => {
     return (
-        <Container>
+        <Container className='mt-4'>
             <div className='text-center'>
                 <img src={logo} alt="" />
                 <h4 className='text-danger'>Journalism Without Fear or Favor</h4>
