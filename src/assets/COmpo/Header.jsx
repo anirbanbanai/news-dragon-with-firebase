@@ -24,7 +24,7 @@ const Header = () => {
                 <Navbar bg="light" variant="light">
                     <Container>
                         <Nav className="mx-auto m-2 ">
-                           <Link className=' m-2 text-decoration-none'><h3>Home</h3></Link>
+                           <Link to='/' className=' m-2 text-decoration-none'><h3>Home</h3></Link>
                            <Link className='m-2 text-decoration-none'><h3>About</h3></Link>
                            <Link className='m-2 text-decoration-none'><h3>Contact</h3></Link>
                         </Nav>

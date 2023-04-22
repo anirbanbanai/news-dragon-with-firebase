@@ -16,7 +16,6 @@ const NewsLayout = () => {
                     <Col lg={3}><RightNav></RightNav></Col>
                 </Row>
             </Container>
-            <Outlet></Outlet>
             <Footer></Footer>
 
         </div>
