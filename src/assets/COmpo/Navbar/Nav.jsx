@@ -5,7 +5,7 @@ const Nav = () => {
     useEffect(()=>{
         fetch('http://localhost:5000/news')
         .then(res=>res.json())
-        .then(data => console.log(data))
+        .then(data => setDsata(data))
     },[])
     return (
         <div>

@@ -6,22 +6,8 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Main from './assets/COmpo/Main';
-import HOme from './assets/COmpo/HOme';
+import { router } from './assets/COmpo/RP';
 
-const router = createBrowserRouter([
-  {
-    path:"/",
-    element:<Main></Main>,
-    children:[
-      {
-        path:'/',
-        element:<HOme></HOme>
-      },
-      
-    ]
-  }
-])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
  

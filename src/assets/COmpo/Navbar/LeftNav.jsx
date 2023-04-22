@@ -43,7 +43,7 @@ const LeftNav = () => {
             <div className='ps-4 '>
                 {
                     catagories.map(m=><p key={m.id}>
-                       <Link className='text-black text-decoration-none'> {m.name}</Link>
+                       <Link to={`/catagory/${m.id}`} className='text-black text-decoration-none'> {m.name}</Link>
                     </p>)
                 }
             </div>

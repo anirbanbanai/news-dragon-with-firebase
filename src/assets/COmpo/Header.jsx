@@ -4,7 +4,7 @@ import moment from 'moment';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import Marquee from "react-fast-marquee";
 import { Link } from 'react-router-dom';
-import { FaTripadvisor } from "react-icons/fa";
+import { CgProfile } from "react-icons/cg";
 
 const Header = () => {
     return (
@@ -29,7 +29,7 @@ const Header = () => {
                            <Link className='m-2 text-decoration-none'><h3>Contact</h3></Link>
                         </Nav>
                         <Nav>
-                            <h4 className='m-3'><FaTripadvisor/> </h4>
+                            <h4 className='m-3'><CgProfile/> </h4>
                         <Button variant="warning">Warning</Button>
                         </Nav>
                     </Container>
