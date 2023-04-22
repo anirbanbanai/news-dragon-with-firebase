@@ -38,9 +38,9 @@ const LeftNav = () => {
     },[])
     // console.log(catagories)
     return (
-        <div>
+        <div className=''>
             <h2>All catagories</h2>
-            <div className='ps-4 '>
+            <div className='ps-4'>
                 {
                     catagories.map(m=><p key={m.id}>
                        <Link to={`/catagory/${m.id}`} className='text-black text-decoration-none'> {m.name}</Link>

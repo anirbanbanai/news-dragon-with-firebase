@@ -32,8 +32,9 @@ export const router = createBrowserRouter([
         element: <NewsLayout></NewsLayout>,
         children: [
             {
-                path: '/news/:id',
-                element: <NewsPage></NewsPage>
+                path: ':id',
+                element: <NewsPage></NewsPage>,
+                loader: ({params})=> fetch(`http://localhost:5000/news/${params.id}`)
             }
         ]
     }
