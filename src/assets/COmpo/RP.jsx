@@ -7,6 +7,9 @@ import HOme from './HOme';
 import Catagory from './Catagory';
 import NewsLayout from './NewsLayout';
 import NewsPage from './News/NewsPage';
+import { Login } from './Login';
+// import Login from './Login';
+// import EdiotorInside from './EdiotorInside';
 
 
 
@@ -17,15 +20,26 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <HOme></HOme>
+                element: <Catagory></Catagory>,
+                loader: ()=>fetch(`http://localhost:5000/news`)
             },
             {
                 path: "/catagory/:id",
                 element: <Catagory></Catagory>,
                 loader:({params})=> fetch(`http://localhost:5000/catagory/${params.id}`)
-            }
+            },
+           
+        //    {
+        //     path:'/ed',
+        //     element:<EdiotorInside></EdiotorInside>
+        //    }
 
-        ]
+        ],
+        
+    },
+    {
+        path:"/login",
+        element:<Login></Login>
     },
     {
         path: '/news',

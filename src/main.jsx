@@ -7,10 +7,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { router } from './assets/COmpo/RP';
+import AuthProvider from './Provder/AuthProvider';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
- 
+ <AuthProvider>
     <RouterProvider router={router}></RouterProvider>
- 
+ </AuthProvider>
 )

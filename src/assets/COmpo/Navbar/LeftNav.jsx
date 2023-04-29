@@ -36,7 +36,6 @@ const LeftNav = () => {
         .then(data=> setCatagories(data))
         .catch(error => console.log(error))
     },[])
-    // console.log(catagories)
     return (
         <div className=''>
             <h2>All catagories</h2>

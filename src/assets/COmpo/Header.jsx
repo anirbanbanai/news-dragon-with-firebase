@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '..//../assets/logo.png'
 import moment from 'moment';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import Marquee from "react-fast-marquee";
 import { Link } from 'react-router-dom';
 import { CgProfile } from "react-icons/cg";
+import { AuthContext } from '../../Provder/AuthProvider';
 
 const Header = () => {
+
+    const {user} = useContext(AuthContext);
+
     return (
         <Container className='mt-4'>
             <div className='text-center'>
@@ -26,11 +30,14 @@ const Header = () => {
                         <Nav className="mx-auto m-2 ">
                            <Link to='/' className=' m-2 text-decoration-none'><h3>Home</h3></Link>
                            <Link className='m-2 text-decoration-none'><h3>About</h3></Link>
+                           <Link className='m-2 text-decoration-none' to="/login"><h3>Login</h3></Link>
                            <Link className='m-2 text-decoration-none'><h3>Contact</h3></Link>
                         </Nav>
                         <Nav>
-                            <h4 className='m-3'><CgProfile/> </h4>
-                        <Button variant="warning">Warning</Button>
+                            <h4 className='m-3'><CgProfile/> {user.displayName} </h4>
+                        {
+                            user ? <Button variant="warning">Login</Button> : <Link to='/login'><Button variant="warning">Login</Button></Link>
+                        }
                         </Nav>
                     </Container>
                 </Navbar>

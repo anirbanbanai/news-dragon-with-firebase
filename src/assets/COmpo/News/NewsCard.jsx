@@ -7,7 +7,7 @@ import { FiShare2 } from "react-icons/fi";
 import { AiFillEye ,AiOutlineStar} from "react-icons/ai";
 
 const NewsCard = ({ main }) => {
-    console.log(main);
+    // console.log(main);
     const { _id, title, image_url, details, total_view, rating, thumbnail_url, author } = main;
     return (
         <Card className=" mb-3">
